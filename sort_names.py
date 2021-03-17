@@ -26,11 +26,30 @@ def save_text(file_path_out, output):
     sys.exit('Job done!')
 
 def sort_with_lambda(list_of_names):
-    list_of_names.sort(key=lambda name: (len(name), name))
+    while op not in ['+', '-', '-z', 'z']:
+        op = input("Sorry, please use one of the available sorting arguments:\n-, -z, z\n")
+
+    if op == '+':
+        # sorts by length of name(asc), then alphabetically(asc)
+        list_of_names.sort(key=lambda name: (len(name), name))
+    elif op == 'z':
+        # sorts by length of name(asc), then alphabetically(desc)
+        list_of_names.sort(key=lambda name: (len(name), name), reverse=True)
+    elif op == '-':
+        # sorts by length(desc), then alpha(asc)
+        list_of_names.sort(key=lambda name: (-len(name), name))
+    elif op == '-z':
+        # sorts by length(desc), then alpha(desc)
+        list_of_names.sort(key=lambda name: (-len(name), name), reverse=True)
 
 
 file_path_in = sys.argv[1]
 file_path_out = sys.argv[2]
+try:
+    sorting_op = sys.argv[3]
+except IndexError:
+    sorting_op = '+'
+
 text = parse_text(file_path_in)
 sort_with_lambda(text)
 save_text(file_path_out, text)

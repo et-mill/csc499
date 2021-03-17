@@ -1,4 +1,4 @@
-Elliot Miller - CSC 499 - Homework 1: Sort Names
+Elliot Miller - CSC 499 - Homework 2: Sort Names - Reversed
 ################################################
 
 A simple script to sort a list of names, first by their length, and then alphabetically.
@@ -7,8 +7,18 @@ The script outputs the results to a user determined text file.
 To run the program, open a terminal in the file location of the sort_names.py script,
 call the script with arguments 'input file path', 'output file path'.
 
+There is now functionality to choose new ways to sort your list.
+by default your list will be sorted length of name(asc), then alphabetically(asc), no argument is needed/
+
+enter one of the optional arguments after the file paths to:
+ z : sort list by length of name(asc), then alphabetically(desc)
+ - : sort list by length of name(desc), then alphabetically(asc)
+-z : sort list by length of name(desc), then alphabetically(desc)
+
 Example terminal command:
 >python sort_names.py 'Sort Me.txt' 'Sorted Names.txt'
+or
+>python sort_names.py 'Sort Me.txt' 'Sorted Names.txt' -z
 
 
 Let me know if you have any questions, thanks for your time!
