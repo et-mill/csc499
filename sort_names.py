@@ -25,7 +25,7 @@ def save_text(file_path_out, output):
     out.close()
     sys.exit('Job done!')
 
-def sort_with_lambda(list_of_names):
+def sort_with_lambda(list_of_names, op):
     while op not in ['+', '-', '-z', 'z']:
         op = input("Sorry, please use one of the available sorting arguments:\n-, -z, z\n")
 
@@ -51,5 +51,5 @@ except IndexError:
     sorting_op = '+'
 
 text = parse_text(file_path_in)
-sort_with_lambda(text)
+sort_with_lambda(text, sorting_op)
 save_text(file_path_out, text)
