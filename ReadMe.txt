@@ -1,4 +1,4 @@
-Elliot Miller - CSC 499 - Homework 2: Sort Names - Reversed
+Elliot Miller - CSC 499 - Homework 3: Sort Names - Reversed - With Test
 ################################################
 
 A simple script to sort a list of names, first by their length, and then alphabetically.
@@ -20,6 +20,12 @@ Example terminal command:
 or
 >python sort_names.py 'Sort Me.txt' 'Sorted Names.txt' -z
 
+To test the correctness of output files:
+run the sort_test.py command in the terminal
+example:
+>python sort_test.py
+
+the output for the example test should be ..F, two passes and a fail.
 
 Let me know if you have any questions, thanks for your time!
 Tested on Manjaro Linux, not sure if there's any particularities with OSX file paths.

@@ -1,5 +1,6 @@
 import sys
 
+
 def parse_text(file_path):
     with open(file_path, "r") as input_names:
         clean_names = []
@@ -18,6 +19,7 @@ def parse_text(file_path):
         input_names.close()
     return clean_names
 
+
 def save_text(file_path_out, output):
     with open(file_path_out, 'w') as out:
         for line in output:
@@ -25,9 +27,14 @@ def save_text(file_path_out, output):
     out.close()
     sys.exit('Job done!')
 
+<<<<<<< Updated upstream
 def sort_with_lambda(list_of_names, op):
+=======
+
+def sort_with_lambda(list_of_names, op='+'):
+>>>>>>> Stashed changes
     while op not in ['+', '-', '-z', 'z']:
-        op = input("Sorry, please use one of the available sorting arguments:\n-, -z, z\n")
+       op = input("Sorry, please use one of the available sorting arguments:\n-, -z, z\n")
 
     if op == '+':
         # sorts by length of name(asc), then alphabetically(asc)
