@@ -32,8 +32,6 @@ class TestFiles(unittest.TestCase):
 
         self.assertListEqual(act, exp)
 
-    
-
 
 if __name__ == '__main__':
     unittest.main()
