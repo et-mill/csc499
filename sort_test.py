@@ -32,8 +32,16 @@ class TestFiles(unittest.TestCase):
 
         self.assertListEqual(act, exp)
 
-    
+    def test3(self):
+        act_open = io.open('output/actualW_+.txt')
+        act = list(act_open)
+        act_open.close()
 
+        exp_open = io.open('reference/sorted_+.txt')
+        exp = list(exp_open)
+        exp_open.close()
+
+        self.assertListEqual(act, exp)
 
 if __name__ == '__main__':
     unittest.main()
